@@ -23,7 +23,7 @@ There are four sets of containers to run:
 Start all the containers:
 
 ```
-docker-compose -f labs/troubleshooting/metrics.yml -f labs/troubleshooting/logging.yml -f labs/troubleshooting/tracing.yml -f labs/troubleshooting/apps.yml -f labs/troubleshooting/load.yml up -d
+docker compose -f labs/troubleshooting/metrics.yml -f labs/troubleshooting/logging.yml -f labs/troubleshooting/tracing.yml -f labs/troubleshooting/apps.yml -f labs/troubleshooting/load.yml up -d
 ```
 
 > Browse to the app at http://localhost:8070 and list the documents for the default user, to check the app is OK
@@ -31,7 +31,7 @@ docker-compose -f labs/troubleshooting/metrics.yml -f labs/troubleshooting/loggi
 The load-generator containers will keep making HTTP requests so you'll have lots of data to work with, but if that's making your machine work too hard, you can stop them and make manual website calls instead:
 
 ```
-docker-compose -f labs/troubleshooting/load.yml stop
+docker compose -f labs/troubleshooting/load.yml stop
 ```
 
 Your goal is to get the observability stack working correctly and reporting everything:
@@ -53,7 +53,7 @@ This is not meant to be a Docker troubleshooting exercise - all the app and netw
 When you find issues, update the files to fix them and run this to restart the containers:
 
 ```
-docker-compose -f labs/troubleshooting/metrics.yml -f labs/troubleshooting/logging.yml -f labs/troubleshooting/tracing.yml -f labs/troubleshooting/apps.yml restart
+docker compose -f labs/troubleshooting/metrics.yml -f labs/troubleshooting/logging.yml -f labs/troubleshooting/tracing.yml -f labs/troubleshooting/apps.yml restart
 ```
 
 Don't go straight to the solution! These are the sort of issues you will get all the time, so it's good to start working through the steps to diagnose problems.

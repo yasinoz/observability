@@ -23,7 +23,7 @@ We'll run the same demo app as in the [Jaeger lab exercises](../jaeger/README.md
 Start all the containers:
 
 ```
-docker-compose -f labs/custom-spans/compose.yml up -d
+docker compose -f labs/custom-spans/compose.yml up -d
 ```
 
 Browse to the web app at http://localhost:8070 and hit _Go_ to load the document list. 
@@ -134,7 +134,7 @@ The demo app can be configured to attach baggage to some of the custom spans:
 Update the application containers:
 
 ```
-docker-compose -f labs/custom-spans/update.yml up -d
+docker compose -f labs/custom-spans/update.yml up -d
 ```
 
 Browse to the [document list page](http://localhost:8070/) and fetch documents for the default `0421` user ID.

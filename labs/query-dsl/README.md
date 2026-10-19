@@ -18,7 +18,7 @@ We'll start by running everything in containers to produce a stream of incoming 
 Run the ELK containers:
 
 ```
-docker-compose -f labs/query-dsl/compose.yml up -d
+docker compose -f labs/query-dsl/compose.yml up -d
 ```
 
 > Check Kibana at http://localhost:5601 - when it's running then Elasticsearch is ready too
@@ -30,7 +30,7 @@ We'll also run the fulfilment processor app we've used already in the course:
 Start the demo app:
 
 ```
-docker-compose -f ./labs/query-dsl/processor-log.yml up -d
+docker compose -f ./labs/query-dsl/processor-log.yml up -d
 ```
 
 Logstash will see the log file and monitor it. Any new lines will get processed by this pipeline:
@@ -355,7 +355,7 @@ You only need mappings for the fields you care most about - this index uses keyw
 Now we can run the document processor configured to generate JSON logs (from [processor-json.yml](./processor-json.yml)):
 
 ```
-docker-compose -f ./labs/query-dsl/processor-json.yml up -d
+docker compose -f ./labs/query-dsl/processor-json.yml up -d
 ```
 
 Logstash is already configured with a pipeline to process those JSON logs:

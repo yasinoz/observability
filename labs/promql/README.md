@@ -21,7 +21,7 @@ In this lab we'll run Prometheus along with multiple instances of the document p
 Run the containers:
 
 ```
-docker-compose -f labs/promql/compose.yml up -d
+docker compose -f labs/promql/compose.yml up -d
 ```
 
 > Browse to Prometheus at http://localhost:9090/targets

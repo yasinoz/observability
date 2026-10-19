@@ -25,7 +25,7 @@ Logstash is a Java application - we'll run it alongside Elasticsearch, in contai
 Start Elasticsearch and Logstash, and check the Logstash logs:
 
 ```
-docker-compose -f labs/logstash/compose.yml up -d
+docker compose -f labs/logstash/compose.yml up -d
 
 docker logs obsfun_logstash_1 -f
 ```

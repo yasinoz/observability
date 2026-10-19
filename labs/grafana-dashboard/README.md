@@ -22,7 +22,7 @@ We'll run the metrics components in Docker containers again, but this time we'll
 Run the metrics containers:
 
 ```
-docker-compose -f labs/grafana-dashboard/metrics.yml up -d
+docker compose -f labs/grafana-dashboard/metrics.yml up -d
 ```
 
 > Browse to Grafana at http://localhost:3000
@@ -45,7 +45,7 @@ Click _show more_ for the fulfilment processor job, and you'll see the new targe
 Run all the demo apps and the metrics will start being collected ([apps.yml](./apps.yml) specifies all the containers):
 
 ```
-docker-compose -f labs/grafana-dashboard/apps.yml up -d
+docker compose -f labs/grafana-dashboard/apps.yml up -d
 ```
 
 ## Visualzing counters and gauges

@@ -16,7 +16,7 @@ Kibana isn't just a great search UI - you can use it for visualizing data too. T
 We'll start by running the ELK in containers with the now-familiar setup in [logging.yml](./logging.yml):
 
 ```
-docker-compose -f labs/kibana-dashboard/logging.yml up -d
+docker compose -f labs/kibana-dashboard/logging.yml up -d
 ```
 
 > Browse to Kibana at http://localhost:5601, when it's ready then the rest of the logging stack is running.
@@ -43,7 +43,7 @@ PUT /fulfilment-processor
 This index will be populated from the same [fulfilment-json-to-es.conf](./pipelines\fulfilment-json-to-es.conf) pipeline. Logstash is already set up and running, so start the demo app to generate the logs:
 
 ```
-docker-compose -f labs/kibana-dashboard/app.yml up -d
+docker compose -f labs/kibana-dashboard/app.yml up -d
 ```
 
 Back in Kibana add an index pattern for the new `fulfilment-processor` index and check the documents in the _Discover_ tab.

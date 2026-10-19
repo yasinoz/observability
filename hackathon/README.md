@@ -33,7 +33,7 @@ docker rm -f $(docker ps -aq)
 Now start all the observability stacks (the YAML files are all in the `hackathon` folder if you want to check them out, but you don't need to - it should all _just work_):
 
 ```
-docker-compose -f hackathon/logging.yml -f hackathon/metrics.yml -f hackathon/tracing.yml up -d
+docker compose -f hackathon/logging.yml -f hackathon/metrics.yml -f hackathon/tracing.yml up -d
 ```
 
 **Before you start the app containers**, create an Elasticsearch index with custom mappings - this will make working with logs much easier:
@@ -67,7 +67,7 @@ The logging stack includes Kibana, available at http://localhost:5601. If you wa
 Run the application stack:
 
 ```
-docker-compose  -f hackathon/apps.yml up -d
+docker compose  -f hackathon/apps.yml up -d
 ```
 
 > The web application uses a different port now, you can access it at http://localhost:8080. Try listing and submitting documents to verify it's all working.
@@ -76,7 +76,7 @@ docker-compose  -f hackathon/apps.yml up -d
 Run load generators so you get a constant stream of instrumentation from the app:
 
 ```
-docker-compose  -f hackathon/load.yml up -d
+docker compose  -f hackathon/load.yml up -d
 ```
 
 You now have all the tools you're familiar with from the course to investigate issues, and plenty of data to work with:
@@ -89,7 +89,7 @@ You now have all the tools you're familiar with from the course to investigate i
 > The load-generator containers will keep making HTTP requests so you'll have lots of data to work with, but if that's making your machine work too hard, you can stop the Fortio containers and make manual website calls instead:
 
 ```
-docker-compose -f hackathon/load.yml stop
+docker compose -f hackathon/load.yml stop
 ```
 
 ## Part 1 - diagnosing slow responses

@@ -1,23 +1,21 @@
-version: '3.7'
-
 services:
 
   node-exporter:
-    image: courselabs/node-exporter:latest
+    image: prom/node-exporter:v1.9.1
     build:
       context: ./node-exporter
 
   prometheus:
-    image: courselabs/prometheus:v2.28.1
+    image: prom/prometheus:v3.15.0
     build:
       context: ./prometheus
 
   grafana:
-    image: courselabs/grafana:8.0.5
+    image: grafana/grafana:13.2.4
     build:
       context: ./grafana
 
   jaeger:
-    image: courselabs/jaeger:1.24
+    image: jaegertracing/jaeger:2.22.0
     build:
       context: ./jaeger

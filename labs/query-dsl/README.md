@@ -1,3 +1,14 @@
+---
+title: Searching with the Query DSL
+lang: en
+slug: query-dsl
+section: logs
+order: 5
+duration: 45
+requires: [docker]
+status: needs-review
+upstream: labs/query-dsl
+---
 # Searching with the Query DSL
 
 Search functionality in Elasticsearch depends very much on the format of your data. In these exercises we'll spend more time exploring the Query DSL, and we'll also look at specifying data types for document fields.

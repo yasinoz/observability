@@ -1,3 +1,14 @@
+---
+title: Exporting Metrics
+lang: en
+slug: metrics
+section: metrics
+order: 1
+duration: 45
+requires: [docker]
+status: needs-review
+upstream: labs/metrics
+---
 # Exporting Metrics
 
 In a distributed architecture, each of your components exposes an HTTP endpoint, publishing all the metrics relevant to that component. The metrics format is standard, and you'll want to capture metrics at different levels of detail.

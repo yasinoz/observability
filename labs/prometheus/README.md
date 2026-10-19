@@ -1,3 +1,14 @@
+---
+title: Prometheus
+lang: en
+slug: prometheus
+section: metrics
+order: 2
+duration: 45
+requires: [docker]
+status: needs-review
+upstream: labs/prometheus
+---
 # Prometheus
 
 [Prometheus](https://prometheus.io) is an open-source monitoring solution. It's a [CNCF](https://www.cncf.io) project (under the same foundation as Kubernetes), and it runs a whole suite of monitoring components.

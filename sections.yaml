@@ -1,0 +1,171 @@
+# Observability track - bolum ve lab tanimlari (iki dilli).
+#
+# Bolum ve lab sirasi reponun mevcut index.md dosyasindan alindi; egitmenin
+# kurdugu ogretim sirasi korunuyor.
+#
+# manifest.json bu dosyadan + lab README frontmatter'larindan uretilir:
+#   python ../labs-platform/tools/make-manifest.py . --write-frontmatter
+#
+# status degerleri:
+#   upstream     - henuz dokunulmadi
+#   needs-review - modernize edildi, canli test EDILMEDI
+#   updated      - modernize edildi VE uctan uca calistirildi
+
+track:
+  slug: observability
+  titles:
+    en: Observability Labs
+    tr: Gözlemlenebilirlik Laboratuvarları
+  summaries:
+    en: Metrics, logs and distributed traces - knowing what your system is doing.
+    tr: Metrikler, loglar ve dağıtık izler — sisteminizin ne yaptığını bilmek.
+  repo:
+    owner: yasinoz
+    name: observability
+    branch: main
+
+sections:
+  - slug: metrics
+    order: 1
+    titles:
+      en: Metrics
+      tr: Metrikler
+    summaries:
+      en: Collecting, querying and visualizing metrics.
+      tr: Metrik toplamak, sorgulamak ve görselleştirmek.
+    labs:
+      - slug: metrics
+        order: 1
+        duration: 45
+        requires: [docker]
+        titles:
+          en: Exporting Metrics
+          tr: Metrik Yayınlamak
+      - slug: prometheus
+        order: 2
+        duration: 45
+        requires: [docker]
+        titles:
+          en: Prometheus
+          tr: Prometheus
+      - slug: promql
+        order: 3
+        duration: 45
+        requires: [docker]
+        titles:
+          en: Querying Metrics with PromQL
+          tr: PromQL ile Metrik Sorgulamak
+      - slug: grafana
+        order: 4
+        duration: 40
+        requires: [docker]
+        titles:
+          en: Grafana
+          tr: Grafana
+      - slug: grafana-dashboard
+        order: 5
+        duration: 45
+        requires: [docker]
+        titles:
+          en: Building Grafana Dashboards
+          tr: Grafana Dashboard'ları Kurmak
+
+  - slug: logs
+    order: 2
+    titles:
+      en: Logs
+      tr: Loglar
+    summaries:
+      en: Writing, shipping, storing and searching application logs.
+      tr: Uygulama loglarını yazmak, taşımak, saklamak ve aramak.
+    labs:
+      - slug: logging
+        order: 1
+        duration: 40
+        requires: [docker]
+        titles:
+          en: Writing Logs
+          tr: Log Yazmak
+      - slug: elasticsearch
+        order: 2
+        duration: 45
+        requires: [docker]
+        titles:
+          en: Running Elasticsearch
+          tr: Elasticsearch Çalıştırmak
+      - slug: logstash
+        order: 3
+        duration: 45
+        requires: [docker]
+        titles:
+          en: Collecting Logs with Logstash
+          tr: Logstash ile Log Toplamak
+      - slug: kibana
+        order: 4
+        duration: 45
+        requires: [docker]
+        titles:
+          en: Kibana
+          tr: Kibana
+      - slug: query-dsl
+        order: 5
+        duration: 45
+        requires: [docker]
+        titles:
+          en: Searching with the Query DSL
+          tr: Query DSL ile Arama
+      - slug: kibana-dashboard
+        order: 6
+        duration: 40
+        requires: [docker]
+        titles:
+          en: Kibana Dashboards
+          tr: Kibana Dashboard'ları
+
+  - slug: tracing
+    order: 3
+    titles:
+      en: Distributed Tracing
+      tr: Dağıtık İzleme
+    summaries:
+      en: Following a request across services.
+      tr: Bir isteği servisler arasında takip etmek.
+    labs:
+      - slug: tracing
+        order: 1
+        duration: 45
+        requires: [docker]
+        titles:
+          en: Application Traces
+          tr: Uygulama İzleri
+      - slug: jaeger
+        order: 2
+        duration: 35
+        requires: [docker]
+        titles:
+          en: Running Jaeger
+          tr: Jaeger Çalıştırmak
+      - slug: custom-spans
+        order: 3
+        duration: 45
+        requires: [docker]
+        titles:
+          en: Custom Spans
+          tr: Özel Span'ler
+
+  - slug: real-world
+    order: 4
+    titles:
+      en: Real World
+      tr: Gerçek Dünya
+    summaries:
+      en: Using all three signals together to find a problem.
+      tr: Bir sorunu bulmak için üç sinyali birlikte kullanmak.
+    labs:
+      - slug: troubleshooting
+        order: 1
+        duration: 50
+        requires: [docker]
+        titles:
+          en: Troubleshooting Observability
+          tr: Gözlemlenebilirlikte Sorun Giderme

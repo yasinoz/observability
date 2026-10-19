@@ -1,3 +1,14 @@
+---
+title: Custom Spans
+lang: en
+slug: custom-spans
+section: tracing
+order: 3
+duration: 45
+requires: [docker]
+status: needs-review
+upstream: labs/custom-spans
+---
 # Custom Spans
 
 OpenTelemetry libraries should instrument incoming and outgoing HTTP requests automatically, so you get distributed tracing without any custom code.

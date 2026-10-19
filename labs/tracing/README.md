@@ -1,3 +1,14 @@
+---
+title: Application Traces
+lang: en
+slug: tracing
+section: tracing
+order: 1
+duration: 45
+requires: [docker]
+status: needs-review
+upstream: labs/tracing
+---
 # Application Traces
 
 Tracing is the third pillar of observability - metrics show you overall health, logs let you dig into the detail and traces help you understand the communication between components.

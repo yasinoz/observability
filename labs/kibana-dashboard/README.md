@@ -1,3 +1,14 @@
+---
+title: Kibana Dashboards
+lang: en
+slug: kibana-dashboard
+section: logs
+order: 6
+duration: 40
+requires: [docker]
+status: needs-review
+upstream: labs/kibana-dashboard
+---
 # Kibana Dashboards
 
 Kibana isn't just a great search UI - you can use it for visualizing data too. There's some cross-over here with the functionality of Grafana, which you'll use to visualize metric data. There are two key differences:

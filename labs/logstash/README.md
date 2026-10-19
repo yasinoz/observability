@@ -1,3 +1,14 @@
+---
+title: Collecting Logs with Logstash
+lang: en
+slug: logstash
+section: logs
+order: 3
+duration: 45
+requires: [docker]
+status: needs-review
+upstream: labs/logstash
+---
 # Collecting Logs with Logstash
 
 Logstash is a log processing system. You typically run it on all your servers, configured to process log files from all the apps running on the server.

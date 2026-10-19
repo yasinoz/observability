@@ -1,3 +1,12 @@
+---
+title: Environment Setup
+lang: en
+slug: setup
+section: index
+order: 0
+status: needs-review
+upstream: setup/README.md
+---
 # Set Up Docker and Git
 
 We'll use lots of observability tools in the course and they each have their own dependencies and configuration. To simplify we'll use Docker containers to run all the components, so you don't need to install a ton of software.

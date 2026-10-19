@@ -1,3 +1,14 @@
+---
+title: Querying Metrics with PromQL
+lang: en
+slug: promql
+section: metrics
+order: 3
+duration: 45
+requires: [docker]
+status: needs-review
+upstream: labs/promql
+---
 # Querying Metrics with PromQL
 
 Prometheus uses its own query language - PromQL. It has operators for comparing metrics and performing maths, and functions for aggregation and manipulation of data. It's quite a complex language, but you can get a lot of the data you want with just a little knowledge.

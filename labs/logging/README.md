@@ -1,3 +1,14 @@
+---
+title: Writing Logs
+lang: en
+slug: logging
+section: logs
+order: 1
+duration: 40
+requires: [docker]
+status: needs-review
+upstream: labs/logging
+---
 # Writing Logs
 
 Logging is a boring but essential topic. Your applications need to generate useful logs to help in debugging - but not generate too many so the important information gets lost.

@@ -1,3 +1,14 @@
+---
+title: Kibana
+lang: en
+slug: kibana
+section: logs
+order: 4
+duration: 45
+requires: [docker]
+status: needs-review
+upstream: labs/kibana
+---
 # Kibana
 
 Kibana is the web front-end for Elasticsearch. It lets you search and filter across indices, using a simplified query language or the full DSL. 

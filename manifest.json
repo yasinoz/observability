@@ -1,0 +1,454 @@
+{
+  "schema": 1,
+  "generated": "2026-10-19",
+  "track": {
+    "slug": "observability",
+    "titles": {
+      "en": "Observability Labs",
+      "tr": "Gözlemlenebilirlik Laboratuvarları"
+    },
+    "summaries": {
+      "en": "Metrics, logs and distributed traces - knowing what your system is doing.",
+      "tr": "Metrikler, loglar ve dağıtık izler — sisteminizin ne yaptığını bilmek."
+    }
+  },
+  "repo": {
+    "owner": "yasinoz",
+    "name": "observability",
+    "branch": "main"
+  },
+  "raw_base": "https://raw.githubusercontent.com/yasinoz/observability/main",
+  "web_base": "https://github.com/yasinoz/observability/blob/main",
+  "setup": {
+    "en": "setup/README.md"
+  },
+  "languages": [
+    "en"
+  ],
+  "sections": [
+    {
+      "slug": "metrics",
+      "order": 1,
+      "titles": {
+        "en": "Metrics",
+        "tr": "Metrikler"
+      },
+      "summaries": {
+        "en": "Collecting, querying and visualizing metrics.",
+        "tr": "Metrik toplamak, sorgulamak ve görselleştirmek."
+      },
+      "labs": [
+        {
+          "slug": "metrics",
+          "order": 1,
+          "titles": {
+            "en": "Exporting Metrics",
+            "tr": "Metrik Yayınlamak"
+          },
+          "duration": 45,
+          "requires": [
+            "docker"
+          ],
+          "status": "needs-review",
+          "path": "labs/metrics",
+          "docs": {
+            "en": {
+              "readme": "labs/metrics/README.md",
+              "hints": "labs/metrics/hints.md",
+              "solution": "labs/metrics/solution.md"
+            }
+          },
+          "langs": [
+            "en"
+          ]
+        },
+        {
+          "slug": "prometheus",
+          "order": 2,
+          "titles": {
+            "en": "Prometheus",
+            "tr": "Prometheus"
+          },
+          "duration": 45,
+          "requires": [
+            "docker"
+          ],
+          "status": "needs-review",
+          "path": "labs/prometheus",
+          "docs": {
+            "en": {
+              "readme": "labs/prometheus/README.md",
+              "hints": "labs/prometheus/hints.md",
+              "solution": "labs/prometheus/solution.md"
+            }
+          },
+          "langs": [
+            "en"
+          ]
+        },
+        {
+          "slug": "promql",
+          "order": 3,
+          "titles": {
+            "en": "Querying Metrics with PromQL",
+            "tr": "PromQL ile Metrik Sorgulamak"
+          },
+          "duration": 45,
+          "requires": [
+            "docker"
+          ],
+          "status": "needs-review",
+          "path": "labs/promql",
+          "docs": {
+            "en": {
+              "readme": "labs/promql/README.md",
+              "hints": "labs/promql/hints.md",
+              "solution": "labs/promql/solution.md"
+            }
+          },
+          "langs": [
+            "en"
+          ]
+        },
+        {
+          "slug": "grafana",
+          "order": 4,
+          "titles": {
+            "en": "Grafana",
+            "tr": "Grafana"
+          },
+          "duration": 40,
+          "requires": [
+            "docker"
+          ],
+          "status": "needs-review",
+          "path": "labs/grafana",
+          "docs": {
+            "en": {
+              "readme": "labs/grafana/README.md",
+              "hints": "labs/grafana/hints.md",
+              "solution": "labs/grafana/solution.md"
+            }
+          },
+          "langs": [
+            "en"
+          ]
+        },
+        {
+          "slug": "grafana-dashboard",
+          "order": 5,
+          "titles": {
+            "en": "Building Grafana Dashboards",
+            "tr": "Grafana Dashboard'ları Kurmak"
+          },
+          "duration": 45,
+          "requires": [
+            "docker"
+          ],
+          "status": "needs-review",
+          "path": "labs/grafana-dashboard",
+          "docs": {
+            "en": {
+              "readme": "labs/grafana-dashboard/README.md",
+              "hints": "labs/grafana-dashboard/hints.md",
+              "solution": "labs/grafana-dashboard/solution.md"
+            }
+          },
+          "langs": [
+            "en"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "logs",
+      "order": 2,
+      "titles": {
+        "en": "Logs",
+        "tr": "Loglar"
+      },
+      "summaries": {
+        "en": "Writing, shipping, storing and searching application logs.",
+        "tr": "Uygulama loglarını yazmak, taşımak, saklamak ve aramak."
+      },
+      "labs": [
+        {
+          "slug": "logging",
+          "order": 1,
+          "titles": {
+            "en": "Writing Logs",
+            "tr": "Log Yazmak"
+          },
+          "duration": 40,
+          "requires": [
+            "docker"
+          ],
+          "status": "needs-review",
+          "path": "labs/logging",
+          "docs": {
+            "en": {
+              "readme": "labs/logging/README.md",
+              "hints": "labs/logging/hints.md",
+              "solution": "labs/logging/solution.md"
+            }
+          },
+          "langs": [
+            "en"
+          ]
+        },
+        {
+          "slug": "elasticsearch",
+          "order": 2,
+          "titles": {
+            "en": "Running Elasticsearch",
+            "tr": "Elasticsearch Çalıştırmak"
+          },
+          "duration": 45,
+          "requires": [
+            "docker"
+          ],
+          "status": "needs-review",
+          "path": "labs/elasticsearch",
+          "docs": {
+            "en": {
+              "readme": "labs/elasticsearch/README.md",
+              "hints": "labs/elasticsearch/hints.md",
+              "solution": "labs/elasticsearch/solution.md"
+            }
+          },
+          "langs": [
+            "en"
+          ]
+        },
+        {
+          "slug": "logstash",
+          "order": 3,
+          "titles": {
+            "en": "Collecting Logs with Logstash",
+            "tr": "Logstash ile Log Toplamak"
+          },
+          "duration": 45,
+          "requires": [
+            "docker"
+          ],
+          "status": "needs-review",
+          "path": "labs/logstash",
+          "docs": {
+            "en": {
+              "readme": "labs/logstash/README.md",
+              "hints": "labs/logstash/hints.md",
+              "solution": "labs/logstash/solution.md"
+            }
+          },
+          "langs": [
+            "en"
+          ]
+        },
+        {
+          "slug": "kibana",
+          "order": 4,
+          "titles": {
+            "en": "Kibana",
+            "tr": "Kibana"
+          },
+          "duration": 45,
+          "requires": [
+            "docker"
+          ],
+          "status": "needs-review",
+          "path": "labs/kibana",
+          "docs": {
+            "en": {
+              "readme": "labs/kibana/README.md",
+              "hints": "labs/kibana/hints.md",
+              "solution": "labs/kibana/solution.md"
+            }
+          },
+          "langs": [
+            "en"
+          ]
+        },
+        {
+          "slug": "query-dsl",
+          "order": 5,
+          "titles": {
+            "en": "Searching with the Query DSL",
+            "tr": "Query DSL ile Arama"
+          },
+          "duration": 45,
+          "requires": [
+            "docker"
+          ],
+          "status": "needs-review",
+          "path": "labs/query-dsl",
+          "docs": {
+            "en": {
+              "readme": "labs/query-dsl/README.md",
+              "hints": "labs/query-dsl/hints.md",
+              "solution": "labs/query-dsl/solution.md"
+            }
+          },
+          "langs": [
+            "en"
+          ]
+        },
+        {
+          "slug": "kibana-dashboard",
+          "order": 6,
+          "titles": {
+            "en": "Kibana Dashboards",
+            "tr": "Kibana Dashboard'ları"
+          },
+          "duration": 40,
+          "requires": [
+            "docker"
+          ],
+          "status": "needs-review",
+          "path": "labs/kibana-dashboard",
+          "docs": {
+            "en": {
+              "readme": "labs/kibana-dashboard/README.md",
+              "hints": "labs/kibana-dashboard/hints.md",
+              "solution": "labs/kibana-dashboard/solution.md"
+            }
+          },
+          "langs": [
+            "en"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "tracing",
+      "order": 3,
+      "titles": {
+        "en": "Distributed Tracing",
+        "tr": "Dağıtık İzleme"
+      },
+      "summaries": {
+        "en": "Following a request across services.",
+        "tr": "Bir isteği servisler arasında takip etmek."
+      },
+      "labs": [
+        {
+          "slug": "tracing",
+          "order": 1,
+          "titles": {
+            "en": "Application Traces",
+            "tr": "Uygulama İzleri"
+          },
+          "duration": 45,
+          "requires": [
+            "docker"
+          ],
+          "status": "needs-review",
+          "path": "labs/tracing",
+          "docs": {
+            "en": {
+              "readme": "labs/tracing/README.md",
+              "hints": "labs/tracing/hints.md",
+              "solution": "labs/tracing/solution.md"
+            }
+          },
+          "langs": [
+            "en"
+          ]
+        },
+        {
+          "slug": "jaeger",
+          "order": 2,
+          "titles": {
+            "en": "Running Jaeger",
+            "tr": "Jaeger Çalıştırmak"
+          },
+          "duration": 35,
+          "requires": [
+            "docker"
+          ],
+          "status": "needs-review",
+          "path": "labs/jaeger",
+          "docs": {
+            "en": {
+              "readme": "labs/jaeger/README.md",
+              "hints": "labs/jaeger/hints.md",
+              "solution": "labs/jaeger/solution.md"
+            }
+          },
+          "langs": [
+            "en"
+          ]
+        },
+        {
+          "slug": "custom-spans",
+          "order": 3,
+          "titles": {
+            "en": "Custom Spans",
+            "tr": "Özel Span'ler"
+          },
+          "duration": 45,
+          "requires": [
+            "docker"
+          ],
+          "status": "needs-review",
+          "path": "labs/custom-spans",
+          "docs": {
+            "en": {
+              "readme": "labs/custom-spans/README.md",
+              "hints": "labs/custom-spans/hints.md",
+              "solution": "labs/custom-spans/solution.md"
+            }
+          },
+          "langs": [
+            "en"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "real-world",
+      "order": 4,
+      "titles": {
+        "en": "Real World",
+        "tr": "Gerçek Dünya"
+      },
+      "summaries": {
+        "en": "Using all three signals together to find a problem.",
+        "tr": "Bir sorunu bulmak için üç sinyali birlikte kullanmak."
+      },
+      "labs": [
+        {
+          "slug": "troubleshooting",
+          "order": 1,
+          "titles": {
+            "en": "Troubleshooting Observability",
+            "tr": "Gözlemlenebilirlikte Sorun Giderme"
+          },
+          "duration": 50,
+          "requires": [
+            "docker"
+          ],
+          "status": "needs-review",
+          "path": "labs/troubleshooting",
+          "docs": {
+            "en": {
+              "readme": "labs/troubleshooting/README.md",
+              "hints": "labs/troubleshooting/hints.md",
+              "solution": "labs/troubleshooting/solution.md"
+            }
+          },
+          "langs": [
+            "en"
+          ]
+        }
+      ]
+    }
+  ],
+  "stats": {
+    "total": 15,
+    "en": 15,
+    "tr": 0,
+    "by_status": {
+      "needs-review": 15
+    }
+  }
+}

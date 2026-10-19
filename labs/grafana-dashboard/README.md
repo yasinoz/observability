@@ -1,3 +1,14 @@
+---
+title: Building Grafana Dashboards
+lang: en
+slug: grafana-dashboard
+section: metrics
+order: 5
+duration: 45
+requires: [docker]
+status: needs-review
+upstream: labs/grafana-dashboard
+---
 # Building Grafana Dashboards
 
 It's easy to go overboard with visualizations and build fancy panels for every metric you capture. There will be too much information if you have more than a dozen or so panels on your dashboard, and it will stop being effective. 

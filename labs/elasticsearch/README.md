@@ -1,3 +1,14 @@
+---
+title: Running Elasticsearch
+lang: en
+slug: elasticsearch
+section: logs
+order: 2
+duration: 45
+requires: [docker]
+status: needs-review
+upstream: labs/elasticsearch
+---
 # Running Elasticsearch
 
 Elasticsearch is a document database - it uses JSON as the data format. Documents are stored in collections called indices, and the data schema is flexible so not all documents in an index need to have the same fields.

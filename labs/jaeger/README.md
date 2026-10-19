@@ -1,3 +1,14 @@
+---
+title: Running Jaeger
+lang: en
+slug: jaeger
+section: tracing
+order: 2
+duration: 35
+requires: [docker]
+status: needs-review
+upstream: labs/jaeger
+---
 # Running Jaeger
 
 [Jaeger](https://www.jaegertracing.io) is a distributed tracing system - it collects and stores traces, and gives you a web UI to find and visualize them. Jaeger originally used its own data format, but it also supports OpenTelemetry.

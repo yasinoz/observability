@@ -1,3 +1,12 @@
+---
+title: Observability Labs
+lang: en
+slug: index
+section: index
+order: 0
+status: needs-review
+upstream: index.md
+---
 Welcome to the observability labs.
 
 These are hands-on resources to help you learn monitoring, logging and tracing.
@@ -12,40 +21,52 @@ These are hands-on resources to help you learn monitoring, logging and tracing.
 - _Optional_
     -   Install [Visual Studio Code](https://code.visualstudio.com) (free - Windows, macOS and Linux) to browse the repo and documentation
 
-## Part 1 - Metrics
+<!-- labs:start -->
 
-- [Exporting metrics](./labs/metrics/README.md)
-- [Running Prometheus](./labs/prometheus/README.md)
+## Metrics
 
-## Part 2 - Building Health Dashboards
+Collecting, querying and visualizing metrics.
 
-- [Querying metrics](./labs/promql/README.md)
-- [Running Grafana](./labs/grafana/README.md)
-- [Building Grafana dashboards](./labs/grafana-dashboard/README.md)
+| Lab | Time | Needs |
+|---|---|---|
+| [Exporting Metrics](labs/metrics/README.md) | 45 min | docker |
+| [Prometheus](labs/prometheus/README.md) | 45 min | docker |
+| [Querying Metrics with PromQL](labs/promql/README.md) | 45 min | docker |
+| [Grafana](labs/grafana/README.md) | 40 min | docker |
+| [Building Grafana Dashboards](labs/grafana-dashboard/README.md) | 45 min | docker |
 
-## Part 3 - Centralized Log Collection
+## Logs
 
-- [Writing logs](./labs/logging/README.md)
-- [Running Elasticsearch](./labs/elasticsearch/README.md)
-- [Collecting logs with Logstash](./labs/logstash/README.md)
+Writing, shipping, storing and searching application logs.
 
-## Part 4 - Searching and Visualizing Logs
+| Lab | Time | Needs |
+|---|---|---|
+| [Writing Logs](labs/logging/README.md) | 40 min | docker |
+| [Running Elasticsearch](labs/elasticsearch/README.md) | 45 min | docker |
+| [Collecting Logs with Logstash](labs/logstash/README.md) | 45 min | docker |
+| [Kibana](labs/kibana/README.md) | 45 min | docker |
+| [Searching with the Query DSL](labs/query-dsl/README.md) | 45 min | docker |
+| [Kibana Dashboards](labs/kibana-dashboard/README.md) | 40 min | docker |
 
-- [Running Kibana](./labs/kibana/README.md)
-- [Searching with the query DSL](./labs/query-dsl/README.md)
-- [Building Kibana dashboards](./labs/kibana-dashboard/README.md) 
+## Distributed Tracing
 
-## Part 5 - Distributed Tracing
+Following a request across services.
 
-- [Application traces](./labs/tracing/README.md) 
-- [Running Jaeger](./labs/jaeger/README.md)
-- [Custom spans](./labs/custom-spans/README.md)
+| Lab | Time | Needs |
+|---|---|---|
+| [Application Traces](labs/tracing/README.md) | 45 min | docker |
+| [Running Jaeger](labs/jaeger/README.md) | 35 min | docker |
+| [Custom Spans](labs/custom-spans/README.md) | 45 min | docker |
 
-## Part 6 - Real-World Observability
+## Real World
 
-- [Troubleshooting](./labs/troubleshooting/README.md)
-- [Hackathon!](./hackathon/README.md) 
+Using all three signals together to find a problem.
 
+| Lab | Time | Needs |
+|---|---|---|
+| [Troubleshooting Observability](labs/troubleshooting/README.md) | 50 min | docker |
+
+<!-- labs:end -->
 
 ### Credits
 

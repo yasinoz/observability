@@ -1,3 +1,14 @@
+---
+title: Troubleshooting Observability
+lang: en
+slug: troubleshooting
+section: real-world
+order: 1
+duration: 50
+requires: [docker]
+status: needs-review
+upstream: labs/troubleshooting
+---
 # Troubleshooting Observability
 
 Observability is all about plugging your applications into collectors - Prometheus for metrics, Logstash for logs and Jeager for traces.

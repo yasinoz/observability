@@ -40,7 +40,7 @@ Kibana keeps working even though you've wiped its data store, but all is not wel
 Restarting the container will initialize the data store again and fix everything up:
 
 ```
-docker restart obsfun_kibana_1
+docker restart obsfun-kibana-1
 ```
 
 Now refresh the UI and browse to _Saved Objects_. Click _Import_ and you can load your (or my) dashboard file - that includes all the related objects, including the index pattern.

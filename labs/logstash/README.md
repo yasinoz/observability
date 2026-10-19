@@ -38,7 +38,7 @@ Start Elasticsearch and Logstash, and check the Logstash logs:
 ```
 docker compose -f labs/logstash/compose.yml up -d
 
-docker logs obsfun_logstash_1 -f
+docker logs obsfun-logstash-1 -f
 ```
 
 > The `-f` flag means Docker will follow the logs, watching the container and printing any new entries. 
@@ -89,7 +89,7 @@ cp data/fulfilment-20210707.csv labs/logstash/data/
 All the log entries will be written to the container console, which is useful for checking your pipeline formatting. Follow the logs to see it:
 
 ```
-docker logs obsfun_logstash_1 -f
+docker logs obsfun-logstash-1 -f
 
 # Ctrl-C when the processing is finished
 ```
@@ -141,7 +141,7 @@ cp labs/logstash/pipeline-config/fulfilment-csv-to-es.yml labs/logstash/config/p
 Check the logs and you'll see Logstash loading the new configuration:
 
 ```
-docker logs obsfun_logstash_1 -n 2
+docker logs obsfun-logstash-1 -n 2
 ```
 
 > The running pipelines log should now state `:running_pipelines=>[:"fulfilment-csv-to-es"]`
@@ -211,7 +211,7 @@ cp labs/logstash/pipeline-config/all-to-es.yml labs/logstash/config/pipelines.ym
 Check the most recent container logs to confirm both pipelines are running:
 
 ```
-docker logs obsfun_logstash_1 -n 2
+docker logs obsfun-logstash-1 -n 2
 ```
 
 > You should see two pipelines in the logs `:running_pipelines=>[:"fulfilment-csv-to-es", :"apache-to-es"]`

@@ -70,7 +70,7 @@ We can see them in Kibana - create an index pattern for `fulfilment-log` and che
 There will be lots, and we can stop the processor now so we don't get any more:
 
 ```
-docker stop obsfun_fulfilment-processor_1
+docker stop obsfun-fulfilment-processor-1
 ```
 
 Explore the data and you'll see it's only partially structured. The `entry` field contains a request ID, but there's not a separate field for that so you can't filter on all logs for one request.
@@ -380,7 +380,7 @@ There will be new structured logs in Elasticsearch now. In Kibana add an index p
 Switch to the _Discover_ tab and select the `fulfilment-json` index pattern. You should have lots of logs, so we can stop the demo app now:
 
 ```
-docker stop obsfun_fulfilment-processor_1
+docker stop obsfun-fulfilment-processor-1
 ```
 
 Back in the _Discover_ tab, the fields and mappings make for very precise searches. 

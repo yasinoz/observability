@@ -23,5 +23,5 @@ curl -H "baggage: authz.skip=true" localhost:8070/index?userId=1024
 Checks the logs in the authorization service and you'll see that the baggage value has been sent on by the web app in the API call:
 
 ```
-docker logs obsfun_fulfilment-authz_1 -n 2
+docker logs obsfun-fulfilment-authz-1 -n 2
 ```

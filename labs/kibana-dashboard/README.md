@@ -186,7 +186,7 @@ Save your dashboard and then confirm you can import it again by resetting the Ki
 You'll get errors once you've done that, so you'll need to restart the Kibana container before you can import your dashboard:
 
 ```
-docker restart obsfun_kibana_1
+docker restart obsfun-kibana-1
 ```
 
 > Stuck? Try [hints](hints.md) or check the [solution](solution.md).

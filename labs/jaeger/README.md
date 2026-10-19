@@ -137,9 +137,9 @@ The application components use OpenTelemetry libraries to record and send trace 
 
 None of the apps required any extra code to collect and send traces, other than wiring in the instrumentation library:
 
-- for the .NET app that's done in the `AddTracing` extension method in the [Tracing](../../src/fulfilment-frontend/Fulfilment.Core/Services/Tracing.cs) class
+- for the .NET app that's done in the `AddTracing` extension method in the [Tracing](https://github.com/courselabs/fulfilment/blob/main/src/fulfilment-frontend/Fulfilment.Core/Services/Tracing.cs) class
 
-- for the Spring Boot app it's done without code by using the `opentracing-spring-jaeger-web-starter` package, referenced in [pom.xml](../../src/fulfilment-api/pom.xml)
+- for the Spring Boot app it's done without code by using the `opentracing-spring-jaeger-web-starter` package, referenced in [pom.xml](https://github.com/courselabs/fulfilment/blob/main/src/fulfilment-api/pom.xml)
 
 ## Lab
 
@@ -154,8 +154,12 @@ Use Jaeger to plot the call stack for submitting documents; which method on whic
 ___
 ## Cleanup
 
-Cleanup by removing all containers:
+Clean up by removing this lab's containers:
 
 ```
-docker rm -f $(docker ps -aq)
+docker compose -f labs/jaeger/jaeger.yml down
+docker compose -f labs/jaeger/apps.yml down
 ```
+
+> This removes only the containers this lab started. If you want
+> a clean slate, `docker ps` will show anything still running.

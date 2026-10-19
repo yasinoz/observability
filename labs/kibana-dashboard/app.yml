@@ -1,7 +1,7 @@
 services:
 
   fulfilment-processor:
-    image: courselabs/fulfilment-processor
+    image: courselabs/fulfilment-processor:25.03
     volumes:
       - ./config/override.json:/app/config/override.json
       - ./data:/app/logs

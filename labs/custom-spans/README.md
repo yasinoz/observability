@@ -55,7 +55,7 @@ Custom spans are good for adding context to a call in your application. In the [
 
 The code to create custom spans is straightforward, with a similar syntax across different languages. 
 
-In C# a new span is started from an `ActivitySource` - you can see it in the `GetDocuments` method of the [ListDocumentService class](../../src/fulfilment-frontend/fulfilment-web/Services/ListDocumentsService.cs):
+In C# a new span is started from an `ActivitySource` - you can see it in the `GetDocuments` method of the [ListDocumentService class](https://github.com/courselabs/fulfilment/blob/main/src/fulfilment-frontend/fulfilment-web/Services/ListDocumentsService.cs):
 
 ```
 apiSpan = _activitySource.StartActivity("document-api-call");
@@ -162,7 +162,7 @@ Open the `get` span for the `Fulfilment.Api` service and you'll see this compone
 
 > Tags add contextual data to spans which you can use for diagnostics; baggage adds data to spans which you can use programatically in services.
 
-You set and retrieve baggage in code in a similar way to tags. The transaction ID is set in the C# `LoadDocuments` method of the [IndexModel class](../../src/fulfilment-frontend/fulfilment-web/Pages/Index.cshtml.cs):
+You set and retrieve baggage in code in a similar way to tags. The transaction ID is set in the C# `LoadDocuments` method of the [IndexModel class](https://github.com/courselabs/fulfilment/blob/main/src/fulfilment-frontend/fulfilment-web/Pages/Index.cshtml.cs):
 
 ```
 postSpan = _activitySource.StartActivity("list-documents");
@@ -191,8 +191,12 @@ curl localhost:8070/index?userId=1024
 ___
 ## Cleanup
 
-Cleanup by removing all containers:
+Clean up by removing this lab's containers:
 
 ```
-docker rm -f $(docker ps -aq)
+docker compose -f labs/custom-spans/compose.yml down
+docker compose -f labs/custom-spans/update.yml down
 ```
+
+> This removes only the containers this lab started. If you want
+> a clean slate, `docker ps` will show anything still running.

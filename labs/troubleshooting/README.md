@@ -63,8 +63,12 @@ Don't go straight to the solution! These are the sort of issues you will get all
 ___
 ## Cleanup
 
-Cleanup by removing all containers:
+Clean up by removing this lab's containers:
 
 ```
-docker rm -f $(docker ps -aq)
+docker compose -f labs/troubleshooting/metrics.yml down
+docker compose -f labs/troubleshooting/load.yml down
 ```
+
+> This removes only the containers this lab started. If you want
+> a clean slate, `docker ps` will show anything still running.

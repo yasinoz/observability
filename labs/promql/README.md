@@ -16,7 +16,7 @@ We've seen labels in the [Prometheus lab](../prometheus/README.md), but they bec
 In this lab we'll run Prometheus along with multiple instances of the document processor app, all configured to produce slightly different metric values:
 
 - [compose.yml](compose.yml) - has the container setup for all the components
-- [prometheus.yml](./config\prometheus.yml) - configures Prometheus will multiple targets for the processor job
+- [prometheus.yml](././config/prometheus.yml) - configures Prometheus will multiple targets for the processor job
 
 Run the containers:
 
@@ -227,8 +227,11 @@ There's a lot to this, so you'll want to start with simpler queries and build up
 ___
 ## Cleanup
 
-Cleanup by removing all containers:
+Clean up by removing this lab's containers:
 
 ```
-docker rm -f $(docker ps -aq)
+docker compose -f labs/promql/compose.yml down
 ```
+
+> This removes only the containers this lab started. If you want
+> a clean slate, `docker ps` will show anything still running.

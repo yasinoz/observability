@@ -40,7 +40,7 @@ PUT /fulfilment-processor
 }
 ```
 
-This index will be populated from the same [fulfilment-json-to-es.conf](./pipelines\fulfilment-json-to-es.conf) pipeline. Logstash is already set up and running, so start the demo app to generate the logs:
+This index will be populated from the same [fulfilment-json-to-es.conf](././pipelines/fulfilment-json-to-es.conf) pipeline. Logstash is already set up and running, so start the demo app to generate the logs:
 
 ```
 docker compose -f labs/kibana-dashboard/app.yml up -d
@@ -183,8 +183,12 @@ docker restart obsfun_kibana_1
 ___
 ## Cleanup
 
-Cleanup by removing all containers:
+Clean up by removing this lab's containers:
 
 ```
-docker rm -f $(docker ps -aq)
+docker compose -f labs/kibana-dashboard/logging.yml down
+docker compose -f labs/kibana-dashboard/app.yml down
 ```
+
+> This removes only the containers this lab started. If you want
+> a clean slate, `docker ps` will show anything still running.

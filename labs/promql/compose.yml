@@ -10,7 +10,7 @@ services:
       - metrics
 
   fulfilment-processor-1:
-    image: courselabs/fulfilment-processor
+    image: courselabs/fulfilment-processor:25.03
     environment:
       - Observability__Metrics__IncludeRuntime=true
     networks: 
@@ -18,7 +18,7 @@ services:
       - metrics
 
   fulfilment-processor-2:
-    image: courselabs/fulfilment-processor
+    image: courselabs/fulfilment-processor:25.03
     environment:
       - Observability__Metrics__IncludeRuntime=true
       - Observability__Metrics__Factor=3
@@ -27,7 +27,7 @@ services:
       - metrics
 
   fulfilment-processor-3:
-    image: courselabs/fulfilment-processor
+    image: courselabs/fulfilment-processor:25.03
     environment:
       - Observability__Metrics__IncludeRuntime=true
       - Observability__Metrics__Factor=0.5

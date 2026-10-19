@@ -1,7 +1,7 @@
 services:
 
   fulfilment-api:
-    image: courselabs/fulfilment-api
+    image: courselabs/fulfilment-api:25.03
     ports:
       - "8071:80"
     environment:
@@ -14,7 +14,7 @@ services:
       - fulfilment 
 
   fulfilment-authz:
-    image: courselabs/fulfilment-authz
+    image: courselabs/fulfilment-authz:25.03
     ports:
       - "8072:80"
     environment:
@@ -30,7 +30,7 @@ services:
       - fulfilment 
 
   fulfilment-web:
-    image: courselabs/fulfilment-web
+    image: courselabs/fulfilment-web:25.03
     ports:
       - "8070:80"
     environment:
@@ -50,7 +50,7 @@ services:
       - fulfilment 
 
   fulfilment-processor-1:
-    image: courselabs/fulfilment-processor
+    image: courselabs/fulfilment-processor:25.03
     environment:
       - Observability__Logging__LogFilePath=logs/fulfilment-processor-1.json
       - Observability__StartupDelaySeconds=30
@@ -64,7 +64,7 @@ services:
       - metrics
 
   fulfilment-processor-2:
-    image: courselabs/fulfilment-processor
+    image: courselabs/fulfilment-processor:25.03
     environment:
       - Observability__Logging__LogFilePath=logs/fulfilment-2.json
       - Observability__Metrics__Factor=1.5

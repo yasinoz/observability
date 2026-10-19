@@ -30,6 +30,15 @@ Start by clearing down any containers you have running from the labs:
 docker rm -f $(docker ps -aq)
 ```
 
+> On **PowerShell** the command substitution syntax is different:
+>
+> ```
+> docker rm -f @(docker ps -aq)
+> ```
+>
+> ⚠️ Either version removes **every** container on your machine, not just the
+> ones from this lab. Run `docker ps` first if you have other work running.
+
 Now start all the observability stacks (the YAML files are all in the `hackathon` folder if you want to check them out, but you don't need to - it should all _just work_):
 
 ```
@@ -171,6 +180,15 @@ When you're done you can remove all the containers:
 ```
 docker rm -f $(docker ps -aq)
 ```
+
+> On **PowerShell** the command substitution syntax is different:
+>
+> ```
+> docker rm -f @(docker ps -aq)
+> ```
+>
+> ⚠️ Either version removes **every** container on your machine, not just the
+> ones from this lab. Run `docker ps` first if you have other work running.
 
 If you've been running the load generators for a long time, you'll have some pretty big log files in the `hackathon/data` directory, so you might want to clear that out:
 

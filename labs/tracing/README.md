@@ -36,7 +36,7 @@ Activity.ActivitySourceName: OpenTelemetry.Instrumentation.AspNetCore
 Activity.DisplayName: /
 Activity.Kind:        Server
 Activity.StartTime:   2021-07-16T08:31:17.1688367Z
-Activity.Duration:    00:00:00.2235717
+Activity.Duration:    00:00.2235717
 Activity.TagObjects:
     http.host: localhost:8070
     http.method: GET
@@ -176,7 +176,7 @@ Activity.ActivitySourceName: OpenTelemetry.Instrumentation.Http
 Activity.DisplayName: HTTP GET
 Activity.Kind:        Client
 Activity.StartTime:   2021-07-19T15:38:15.4166205Z
-Activity.Duration:    00:00:00.0174145
+Activity.Duration:    00:00.0174145
 Activity.TagObjects:
     http.method: GET
     http.host: fulfilment-api
@@ -227,8 +227,12 @@ Add a trace ID to the curl call and verify that your ID gets used in the spans f
 ___
 ## Cleanup
 
-Cleanup by removing all containers:
+Clean up by removing this lab's containers:
 
 ```
-docker rm -f $(docker ps -aq)
+docker compose -f labs/tracing/web.yml down
+docker compose -f labs/tracing/api.yml down
 ```
+
+> This removes only the containers this lab started. If you want
+> a clean slate, `docker ps` will show anything still running.

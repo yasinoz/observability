@@ -245,8 +245,12 @@ Use the API to query the values of the `fulfilment_in_flight_total` metric for t
 ___
 ## Cleanup
 
-Cleanup by removing all containers:
+Clean up by removing this lab's containers:
 
 ```
-docker rm -f $(docker ps -aq)
+docker compose -f labs/prometheus/prometheus.yml down
+docker compose -f labs/prometheus/apps.yml down
 ```
+
+> This removes only the containers this lab started. If you want
+> a clean slate, `docker ps` will show anything still running.

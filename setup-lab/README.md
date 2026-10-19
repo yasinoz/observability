@@ -10,7 +10,7 @@ You will be provided with a Windows VM running in Azure to use for the class. Th
 
 You'll be given the connection details for your Windows VM during the class - pick a machine from the list:
 
-- [Lab VMs](/lab-vms.html)
+- Egitmeniniz ders basinda VM baglanti bilgilerini paylasacak.
 
 You can connect to the VM using Remote Desktop on Windows, [Microsoft Remote Desktop](https://itunes.apple.com/us/app/microsoft-remote-desktop-8-0/id715768417) from the Mac App Store or [Remmina](https://github.com/FreeRDP/Remmina/wiki#for-end-users) on Linux.
 
@@ -20,11 +20,11 @@ _Connect to the VM. The machine name will be something like:_
 lab001.eastus.cloudapp.azure.com
 ```
 
-![](/img/setup-lab-rdp.png)
+![](../img/setup-lab-rdp.png)
 
 When you're connected you'll see there are icons in the taskbar to run all the apps we'll use:
 
-![](/img/setup-lab-apps.png)
+![](../img/setup-lab-apps.png)
 
 - VS Code has all the exercises ready to go; you can hit _Ctrl-`_ to open a terminal window to run commands
 

@@ -407,8 +407,13 @@ Try to replicate the filter you have in the _Discover_ page using Query DSL.
 ___
 ## Cleanup
 
-Cleanup by removing all containers:
+Clean up by removing this lab's containers:
 
 ```
-docker rm -f $(docker ps -aq)
+docker compose -f labs/query-dsl/compose.yml down
+docker compose -f ./labs/query-dsl/processor-log.yml down
+docker compose -f ./labs/query-dsl/processor-json.yml down
 ```
+
+> This removes only the containers this lab started. If you want
+> a clean slate, `docker ps` will show anything still running.

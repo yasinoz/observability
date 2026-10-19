@@ -199,8 +199,12 @@ Save your dashboard as JSON so you can load it into another Grafana instance lat
 ___
 ## Cleanup
 
-Cleanup by removing all containers:
+Clean up by removing this lab's containers:
 
 ```
-docker rm -f $(docker ps -aq)
+docker compose -f labs/grafana/grafana.yml down
+docker compose -f labs/grafana/apps.yml down
 ```
+
+> This removes only the containers this lab started. If you want
+> a clean slate, `docker ps` will show anything still running.

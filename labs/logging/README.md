@@ -113,15 +113,15 @@ Some servers (like Apache) let you configure the output log format, but it's you
 Exit the Nginx container with `Ctrl-C` and run an applcation container. This is the mock document processor we've used in the metrics labs:
 
 ```
-docker run -it courselabs/fulfilment-processor
+docker run -it courselabs/fulfilment-processor:25.03
 ```
 
 When it runs the app prints lots of logs - these are fake log entries for each document being processed. You'll see entries like this:
 
 ```
-[05:48:48 DBG] Fulfilment request processed. Request ID: 22173649. Took: 5390ms.
-[05:48:48 VRB] Fulfilment requested. Request ID: 33722562
-[05:48:48 ERR] Fulfilment error! Request ID: 33722562. Error: Document service unavailable
+[05:48 DBG] Fulfilment request processed. Request ID: 22173649. Took: 5390ms.
+[05:48 VRB] Fulfilment requested. Request ID: 33722562
+[05:48 ERR] Fulfilment error! Request ID: 33722562. Error: Document service unavailable
 ```
 
 📋 What do the values `DBG`, `VRB` and `ERR` mean?
@@ -140,7 +140,7 @@ This app lets you configure the logging level using an environment variable:
 ```
 # Ctrl-C to exit
 
-docker run -it -e Serilog__MinimumLevel=Debug courselabs/fulfilment-processor
+docker run -it -e Serilog__MinimumLevel=Debug courselabs/fulfilment-processor:25.03
 ```
 
 Now you'll only see Debug and Error logs. You might run at this level in test environments, or temporarily in production to track down problems. 
@@ -159,7 +159,7 @@ This app uses the `MinimumLevel` environment variable:
 ```
 # Ctrl-C to exit
 
-docker run -it -e Serilog__MinimumLevel=Error courselabs/fulfilment-processor
+docker run -it -e Serilog__MinimumLevel=Error courselabs/fulfilment-processor:25.03
 ```
 
 </details><br/>
@@ -175,7 +175,7 @@ Unstructured and semi-structured logs are not easy to work with. You'll have a p
 This log entry can be parsed with a regular expression, but it only has three fields you can reliably extract:
 
 ```
-[05:48:48 ERR] Fulfilment error! Request ID: 33722562. Error: Document service unavailable
+[05:48 ERR] Fulfilment error! Request ID: 33722562. Error: Document service unavailable
 ```
 
 - the timestamp when the log was written
@@ -189,7 +189,7 @@ To compare that, run the document processor with a new configuration setting, so
 ```
 # Ctrl-C to exit
 
-docker run -it -e Observability__Logging__Structured=true courselabs/fulfilment-processor
+docker run -it -e Observability__Logging__Structured=true courselabs/fulfilment-processor:25.03
 ```
 
 Now you'll see logs in JSON format like this:
@@ -210,7 +210,7 @@ JSON is much easier (and faster) to parse than a regular expression, and this en
 - name of the machine the wrote the los
 - version of the application
 
-The code that writes these logs is in the [DocumentProcessor class](../../src/fulfilment-processor/DocumentProcessor.cs). It's a C# app but you don't need to be familiar with the language to see how the logs are written.
+The code that writes these logs is in the [DocumentProcessor class](https://github.com/courselabs/fulfilment/blob/main/src/fulfilment-processor/DocumentProcessor.cs). It's a C# app but you don't need to be familiar with the language to see how the logs are written.
 
 📋 Compare the logging options in the `RecordFailed` method. What is the difference with the structured logs?
 
@@ -254,3 +254,12 @@ Cleanup by removing all containers:
 ```
 docker rm -f $(docker ps -aq)
 ```
+
+> On **PowerShell** the command substitution syntax is different:
+>
+> ```
+> docker rm -f @(docker ps -aq)
+> ```
+>
+> ⚠️ Either version removes **every** container on your machine, not just the
+> ones from this lab. Run `docker ps` first if you have other work running.

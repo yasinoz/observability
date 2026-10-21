@@ -13,6 +13,22 @@ upstream: labs/query-dsl
 
 Search functionality in Elasticsearch depends very much on the format of your data. In these exercises we'll spend more time exploring the Query DSL, and we'll also look at specifying data types for document fields.
 
+<!-- prereqs:auto -->
+## Before you start
+
+Takes about 45 minutes.
+
+**Docker Desktop** must be running. Check it:
+
+```
+docker version
+```
+
+A `Server:` section in the output means you are ready. If you get an error
+instead, start Docker Desktop and wait until the whale icon stops animating.
+
+> Run every command from the **root of this repository** - the paths in this lab are written relative to it.
+
 ## Reference
 
 - [Match queries](https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl-match-query.html) - searching for words and phrases

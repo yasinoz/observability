@@ -19,6 +19,22 @@ There is **a lot** of configuration between all these things, making sure the pi
 
 Plenty of things can go wrong in the setup, which will manifest as your apps missing logs or metrics, or parts of traces not being reported.
 
+<!-- prereqs:auto -->
+## Before you start
+
+Takes about 50 minutes.
+
+**Docker Desktop** must be running. Check it:
+
+```
+docker version
+```
+
+A `Server:` section in the output means you are ready. If you get an error
+instead, start Docker Desktop and wait until the whale icon stops animating.
+
+> Run every command from the **root of this repository** - the paths in this lab are written relative to it.
+
 ## Lab
 
 This one is all lab :) 

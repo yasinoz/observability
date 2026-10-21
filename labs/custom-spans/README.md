@@ -17,6 +17,22 @@ Sometimes you want more than that - you might have CPU-intensive processing you 
 
 For that you can explicitly record spans in code, which can greatly add to the meaningfulness of your traces.
 
+<!-- prereqs:auto -->
+## Before you start
+
+Takes about 45 minutes.
+
+**Docker Desktop** must be running. Check it:
+
+```
+docker version
+```
+
+A `Server:` section in the output means you are ready. If you get an error
+instead, start Docker Desktop and wait until the whale icon stops animating.
+
+> Run every command from the **root of this repository** - the paths in this lab are written relative to it.
+
 ## Reference
 
 - [OpenTelemetry tracing API specs](https://github.com/open-telemetry/opentelemetry-specification/blob/main/specification/trace/api.md) - useful, but very low-level detail

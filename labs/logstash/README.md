@@ -17,6 +17,22 @@ Processing is done with pipelines - you specify the input file(s) to read, any p
 
 Elasticsearch is one of the output destinations, so you can run Logstash to collect all your logs and store them centrally.
 
+<!-- prereqs:auto -->
+## Before you start
+
+Takes about 45 minutes.
+
+**Docker Desktop** must be running. Check it:
+
+```
+docker version
+```
+
+A `Server:` section in the output means you are ready. If you get an error
+instead, start Docker Desktop and wait until the whale icon stops animating.
+
+> Run every command from the **root of this repository** - the paths in this lab are written relative to it.
+
 ## Reference
 
 - [Pipeline input plugins](https://www.elastic.co/guide/en/logstash/7.x/input-plugins.html) - configuration for [file input](https://www.elastic.co/guide/en/logstash/7.x/plugins-inputs-file.html) 

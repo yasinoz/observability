@@ -13,6 +13,22 @@ upstream: labs/metrics
 
 In a distributed architecture, each of your components exposes an HTTP endpoint, publishing all the metrics relevant to that component. The metrics format is standard, and you'll want to capture metrics at different levels of detail.
 
+<!-- prereqs:auto -->
+## Before you start
+
+Takes about 45 minutes.
+
+**Docker Desktop** must be running. Check it:
+
+```
+docker version
+```
+
+A `Server:` section in the output means you are ready. If you get an error
+instead, start Docker Desktop and wait until the whale icon stops animating.
+
+> Run every command from the **root of this repository** - the paths in this lab are written relative to it.
+
 ## Reference
 
 - [Prometheus exposition format](https://prometheus.io/docs/instrumenting/exposition_formats/) - the most common metrics format

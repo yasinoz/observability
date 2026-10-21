@@ -13,6 +13,22 @@ upstream: labs/grafana
 
 [Grafana](https://grafana.com/oss/grafana/) is a web-based UI for visualizing data. It can consume data from many different sources, and it's particularly well matched with Prometheus. You might use the Prometheus UI to fine-tune your queries, and then you'd take the PromQL and use it in Grafana.
 
+<!-- prereqs:auto -->
+## Before you start
+
+Takes about 40 minutes.
+
+**Docker Desktop** must be running. Check it:
+
+```
+docker version
+```
+
+A `Server:` section in the output means you are ready. If you get an error
+instead, start Docker Desktop and wait until the whale icon stops animating.
+
+> Run every command from the **root of this repository** - the paths in this lab are written relative to it.
+
 ## Reference
 
 - [Using Prometheus as a data source](https://grafana.com/docs/grafana/latest/datasources/prometheus/)

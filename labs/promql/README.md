@@ -13,6 +13,22 @@ upstream: labs/promql
 
 Prometheus uses its own query language - PromQL. It has operators for comparing metrics and performing maths, and functions for aggregation and manipulation of data. It's quite a complex language, but you can get a lot of the data you want with just a little knowledge.
 
+<!-- prereqs:auto -->
+## Before you start
+
+Takes about 45 minutes.
+
+**Docker Desktop** must be running. Check it:
+
+```
+docker version
+```
+
+A `Server:` section in the output means you are ready. If you get an error
+instead, start Docker Desktop and wait until the whale icon stops animating.
+
+> Run every command from the **root of this repository** - the paths in this lab are written relative to it.
+
 ## Reference
 
 - [PromQL basics](https://prometheus.io/docs/prometheus/latest/querying/basics/)

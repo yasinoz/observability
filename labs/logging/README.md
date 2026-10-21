@@ -15,6 +15,22 @@ Logging is a boring but essential topic. Your applications need to generate usef
 
 What you log will depend on your application, but you should ensure you log to different levels and make the level configurable. And if you use a structured logging framework, that will make searching much easier.
 
+<!-- prereqs:auto -->
+## Before you start
+
+Takes about 40 minutes.
+
+**Docker Desktop** must be running. Check it:
+
+```
+docker version
+```
+
+A `Server:` section in the output means you are ready. If you get an error
+instead, start Docker Desktop and wait until the whale icon stops animating.
+
+> Run every command from the **root of this repository** - the paths in this lab are written relative to it.
+
 ## Reference
 
 - [Logging levels 101](https://stackify.com/logging-levels-101/) - typical levels and how to choose 

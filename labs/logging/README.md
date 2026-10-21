@@ -124,7 +124,7 @@ Some servers (like Apache) let you configure the output log format, but it's you
 Exit the Nginx container with `Ctrl-C` and run an applcation container. This is the mock document processor we've used in the metrics labs:
 
 ```
-docker run -it courselabs/fulfilment-processor:25.03
+docker run -it courselabs/fulfilment-processor@sha256:578bc38424a1891bbe613925a04e27461fd6cad36de31a2efdbab0acb5d19b26
 ```
 
 When it runs the app prints lots of logs - these are fake log entries for each document being processed. You'll see entries like this:
@@ -151,7 +151,7 @@ This app lets you configure the logging level using an environment variable:
 ```
 # Ctrl-C to exit
 
-docker run -it -e Serilog__MinimumLevel=Debug courselabs/fulfilment-processor:25.03
+docker run -it -e Serilog__MinimumLevel=Debug courselabs/fulfilment-processor@sha256:578bc38424a1891bbe613925a04e27461fd6cad36de31a2efdbab0acb5d19b26
 ```
 
 Now you'll only see Debug and Error logs. You might run at this level in test environments, or temporarily in production to track down problems. 
@@ -170,7 +170,7 @@ This app uses the `MinimumLevel` environment variable:
 ```
 # Ctrl-C to exit
 
-docker run -it -e Serilog__MinimumLevel=Error courselabs/fulfilment-processor:25.03
+docker run -it -e Serilog__MinimumLevel=Error courselabs/fulfilment-processor@sha256:578bc38424a1891bbe613925a04e27461fd6cad36de31a2efdbab0acb5d19b26
 ```
 
 </details><br/>
@@ -200,7 +200,7 @@ To compare that, run the document processor with a new configuration setting, so
 ```
 # Ctrl-C to exit
 
-docker run -it -e Observability__Logging__Structured=true courselabs/fulfilment-processor:25.03
+docker run -it -e Observability__Logging__Structured=true courselabs/fulfilment-processor@sha256:578bc38424a1891bbe613925a04e27461fd6cad36de31a2efdbab0acb5d19b26
 ```
 
 Now you'll see logs in JSON format like this:

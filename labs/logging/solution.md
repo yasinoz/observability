@@ -3,7 +3,7 @@
 You can set all the logging configuration with environment variables, and run the container in the background like this:
 
 ```
-docker run -d -e Serilog__MinimumLevel=Debug -e Observability__Logging__Structured=true -e Observability__Logging__File=true -e Observability__Logging__Console=false --name processor courselabs/fulfilment-processor@sha256:578bc38424a1891bbe613925a04e27461fd6cad36de31a2efdbab0acb5d19b26
+docker run -d -e Serilog__MinimumLevel=Debug -e Observability__Logging__Structured=true -e Observability__Logging__File=true -e Observability__Logging__Console=false --name processor ghcr.io/yasinoz/courselabs/fulfilment-processor:sha-578bc38424a1
 ```
 
 When it's running, connect to the container with:

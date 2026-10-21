@@ -1,7 +1,7 @@
 services:
 
   prometheus:
-    image: prom/prometheus:v3.15.0
+    image: ghcr.io/yasinoz/prom/prometheus:v3.15.0
     ports: 
       - 9090:9090
     volumes:
@@ -10,7 +10,7 @@ services:
       - metrics
 
   fulfilment-processor-1:
-    image: courselabs/fulfilment-processor@sha256:578bc38424a1891bbe613925a04e27461fd6cad36de31a2efdbab0acb5d19b26
+    image: ghcr.io/yasinoz/courselabs/fulfilment-processor:sha-578bc38424a1
     environment:
       - Observability__Metrics__IncludeRuntime=true
     networks: 
@@ -18,7 +18,7 @@ services:
       - metrics
 
   fulfilment-processor-2:
-    image: courselabs/fulfilment-processor@sha256:578bc38424a1891bbe613925a04e27461fd6cad36de31a2efdbab0acb5d19b26
+    image: ghcr.io/yasinoz/courselabs/fulfilment-processor:sha-578bc38424a1
     environment:
       - Observability__Metrics__IncludeRuntime=true
       - Observability__Metrics__Factor=3
@@ -27,7 +27,7 @@ services:
       - metrics
 
   fulfilment-processor-3:
-    image: courselabs/fulfilment-processor@sha256:578bc38424a1891bbe613925a04e27461fd6cad36de31a2efdbab0acb5d19b26
+    image: ghcr.io/yasinoz/courselabs/fulfilment-processor:sha-578bc38424a1
     environment:
       - Observability__Metrics__IncludeRuntime=true
       - Observability__Metrics__Factor=0.5

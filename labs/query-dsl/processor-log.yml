@@ -1,7 +1,7 @@
 services:
 
   fulfilment-processor:
-    image: courselabs/fulfilment-processor@sha256:578bc38424a1891bbe613925a04e27461fd6cad36de31a2efdbab0acb5d19b26
+    image: ghcr.io/yasinoz/courselabs/fulfilment-processor:sha-578bc38424a1
     environment:
       - Observability__Logging__Structured=false
       - Observability__Logging__File=true

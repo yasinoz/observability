@@ -6,7 +6,7 @@ section: tracing
 order: 3
 duration: 45
 requires: [docker]
-status: needs-review
+status: updated
 upstream: labs/custom-spans
 ---
 # Custom Spans

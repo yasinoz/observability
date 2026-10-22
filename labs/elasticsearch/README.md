@@ -6,7 +6,7 @@ section: logs
 order: 2
 duration: 45
 requires: [docker]
-status: needs-review
+status: updated
 upstream: labs/elasticsearch
 ---
 # Running Elasticsearch

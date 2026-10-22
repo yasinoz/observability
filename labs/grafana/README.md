@@ -6,7 +6,7 @@ section: metrics
 order: 4
 duration: 40
 requires: [docker]
-status: needs-review
+status: updated
 upstream: labs/grafana
 ---
 # Grafana

@@ -6,7 +6,7 @@ section: metrics
 order: 5
 duration: 45
 requires: [docker]
-status: needs-review
+status: updated
 upstream: labs/grafana-dashboard
 ---
 # Building Grafana Dashboards

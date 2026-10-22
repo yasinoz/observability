@@ -6,7 +6,7 @@ section: logs
 order: 5
 duration: 45
 requires: [docker]
-status: needs-review
+status: updated
 upstream: labs/query-dsl
 ---
 # Searching with the Query DSL

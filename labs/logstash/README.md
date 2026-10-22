@@ -6,7 +6,7 @@ section: logs
 order: 3
 duration: 45
 requires: [docker]
-status: needs-review
+status: updated
 upstream: labs/logstash
 ---
 # Collecting Logs with Logstash

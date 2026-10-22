@@ -6,7 +6,7 @@ section: tracing
 order: 2
 duration: 35
 requires: [docker]
-status: needs-review
+status: updated
 upstream: labs/jaeger
 ---
 # Running Jaeger

@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generated": "2026-10-21",
+  "generated": "2026-10-22",
   "track": {
     "slug": "observability",
     "titles": {
@@ -73,7 +73,7 @@
           "requires": [
             "docker"
           ],
-          "status": "needs-review",
+          "status": "updated",
           "path": "labs/prometheus",
           "docs": {
             "en": {
@@ -97,7 +97,7 @@
           "requires": [
             "docker"
           ],
-          "status": "needs-review",
+          "status": "updated",
           "path": "labs/promql",
           "docs": {
             "en": {
@@ -121,7 +121,7 @@
           "requires": [
             "docker"
           ],
-          "status": "needs-review",
+          "status": "updated",
           "path": "labs/grafana",
           "docs": {
             "en": {
@@ -145,7 +145,7 @@
           "requires": [
             "docker"
           ],
-          "status": "needs-review",
+          "status": "updated",
           "path": "labs/grafana-dashboard",
           "docs": {
             "en": {
@@ -207,7 +207,7 @@
           "requires": [
             "docker"
           ],
-          "status": "needs-review",
+          "status": "updated",
           "path": "labs/elasticsearch",
           "docs": {
             "en": {
@@ -231,7 +231,7 @@
           "requires": [
             "docker"
           ],
-          "status": "needs-review",
+          "status": "updated",
           "path": "labs/logstash",
           "docs": {
             "en": {
@@ -255,7 +255,7 @@
           "requires": [
             "docker"
           ],
-          "status": "needs-review",
+          "status": "updated",
           "path": "labs/kibana",
           "docs": {
             "en": {
@@ -279,7 +279,7 @@
           "requires": [
             "docker"
           ],
-          "status": "needs-review",
+          "status": "updated",
           "path": "labs/query-dsl",
           "docs": {
             "en": {
@@ -303,7 +303,7 @@
           "requires": [
             "docker"
           ],
-          "status": "needs-review",
+          "status": "updated",
           "path": "labs/kibana-dashboard",
           "docs": {
             "en": {
@@ -341,7 +341,7 @@
           "requires": [
             "docker"
           ],
-          "status": "needs-review",
+          "status": "updated",
           "path": "labs/tracing",
           "docs": {
             "en": {
@@ -365,7 +365,7 @@
           "requires": [
             "docker"
           ],
-          "status": "needs-review",
+          "status": "updated",
           "path": "labs/jaeger",
           "docs": {
             "en": {
@@ -389,7 +389,7 @@
           "requires": [
             "docker"
           ],
-          "status": "needs-review",
+          "status": "updated",
           "path": "labs/custom-spans",
           "docs": {
             "en": {
@@ -427,7 +427,7 @@
           "requires": [
             "docker"
           ],
-          "status": "needs-review",
+          "status": "updated",
           "path": "labs/troubleshooting",
           "docs": {
             "en": {
@@ -448,7 +448,8 @@
     "en": 15,
     "tr": 0,
     "by_status": {
-      "needs-review": 15
+      "needs-review": 2,
+      "updated": 13
     }
   }
 }

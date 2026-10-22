@@ -49,7 +49,7 @@
           "requires": [
             "docker"
           ],
-          "status": "needs-review",
+          "status": "updated",
           "path": "labs/metrics",
           "docs": {
             "en": {
@@ -183,7 +183,7 @@
           "requires": [
             "docker"
           ],
-          "status": "needs-review",
+          "status": "updated",
           "path": "labs/logging",
           "docs": {
             "en": {
@@ -448,8 +448,7 @@
     "en": 15,
     "tr": 0,
     "by_status": {
-      "needs-review": 2,
-      "updated": 13
+      "updated": 15
     }
   }
 }
